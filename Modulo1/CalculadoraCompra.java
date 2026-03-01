@@ -6,15 +6,15 @@ public class CalculadoraCompra {
         Scanner entradScanner = new Scanner(System.in);
         final double TASA_IMPUESTO = 0.15; // 15% de impuesto
 
-         System.out.println("Bienvenido a la Calculadora de Compra!");
-         System.out.print("Ingrese el precio unitario del artículo: ");
-         double precioUnitario = entradScanner.nextDouble();
+        System.out.println("Bienvenido a la Calculadora de Compra!");
+        System.out.print("Ingrese el precio unitario del artículo: ");
+        double precioUnitario = entradScanner.nextDouble();
 
-         System.out.print("Ingrese la cantidad de artículos comprados: ");
-         int cantidadArticulos = entradScanner.nextInt();
+        System.out.print("Ingrese la cantidad de artículos comprados: ");
+        int cantidadArticulos = entradScanner.nextInt();
         
-         System.out.println("Cantidad a pagar el cliente por los artículos ");
-         double cantidadaPagar = entradScanner.nextDouble();
+        System.out.println("Cantidad a pagar el cliente por los artículos ");
+        double cantidadaPagar = entradScanner.nextDouble();
         entradScanner.nextLine();
 
         // Calcular el subtotal, el monto del impuesto, el total de la compra y el cambio
