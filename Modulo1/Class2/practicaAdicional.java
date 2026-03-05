@@ -1,4 +1,5 @@
 package Class2;
+import java.util.Arrays;
 import java.util.Scanner;
 public class practicaAdicional {
 
@@ -203,7 +204,25 @@ private static final Scanner entrada = new Scanner(System.in);
        
     }
      public static void ejercicio10(){
+        System.out.println("---C-A-C-U-L-O---D-E---L-A---M-E-D-I-A---\n");
         System.out.println("Ingrese la cantidad de numeros que tiene la media");
+
+        int iteracion = entrada.nextInt();
+        int contador = 0;
+        double total = 0;
+        double[] listaMedia = new double [iteracion];
+
+        while (contador != iteracion){
+         System.out.printf("Ingrese el #%d valor: ", contador + 1);
+         double num = entrada.nextDouble();
+         listaMedia[contador]= num;
+         contador ++;
+         total = total + num;
+         
+
+        }
+
+        System.out.println("La Media de los numeros: " + Arrays.toString(listaMedia) +"/["+ iteracion + "] es: " + total/iteracion );
 
        
     }
