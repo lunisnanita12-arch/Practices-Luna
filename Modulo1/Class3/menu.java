@@ -26,13 +26,14 @@ public class menu {
                     if (submenu <= 0 || submenu >=3){ //uso de condicional IF ya que es un submenu corto
                         System.out.println("Opcion Invalida");
                     }else if (submenu == 1){
-                        final double PI = 3.14159; //uso de variable constante -¿Esta bien declararla desde aca?                        System.out.println("----C-A-L-C-U-L-O----A-R-E-A----D-E-L----C-I-R-C-U-L-O----\n");
+                        final double PI = 3.14159; //uso de variable constante -¿Esta bien declararla desde aca? 
+                        System.out.println("\n----C-A-L-C-U-L-O----A-R-E-A----D-E-L----C-I-R-C-U-L-O----\n");
                         System.out.println("Para calcular el area del circulo ingrese el valor de su radio");
                         double radio = entradaDato.nextDouble();
                         double area = PI *(radio*radio);
                         System.out.printf("El area del circulo con radio %.1f es: %.1f /n ", radio, area);
                     }else {
-                        System.out.println("----C-A-L-C-U-L-O----A-R-E-A----D-E-L----R-E-C-T-A-N-G-U-L-O----");
+                        System.out.println("\n----C-A-L-C-U-L-O----A-R-E-A----D-E-L----R-E-C-T-A-N-G-U-L-O----");
                         System.out.println("Para calcular el area del rectangulo ingrese el valor de la base");
                         double base = entradaDato.nextDouble();
                         System.out.println("ingrese el valor de el altura");
@@ -43,7 +44,13 @@ public class menu {
                     }
                 }
                 case 2 ->{
-
+                    System.out.println("----C-A-L-C-U-L-O----D-E----LA----E-D-A-D----F-U-T-U-R-A----");
+                    System.out.println("Ingrese tu edad actual");
+                    int edadActual = entradaDato.nextInt();
+                    System.out.println("Ingrese el numero de años en el futuro que quiere calcular");
+                    int añofuturo = entradaDato.nextInt();
+                    var añosEnElFuturo = añofuturo + edadActual;
+                    System.out.printf(" Los años que tendras en %d años sera de %d años %n", añofuturo, añosEnElFuturo);
                 }
 
             
