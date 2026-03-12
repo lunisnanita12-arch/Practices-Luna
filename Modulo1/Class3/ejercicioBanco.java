@@ -5,7 +5,10 @@ import java.util.Scanner;
 public class ejercicioBanco {
 
 public static final Scanner entrada= new Scanner(System.in);
-    public static void main(String[] args) {
+public static int usuario = 1415;    
+public static  int contraseña = 1234;
+public static double saldoInicial = 1000000;
+public static void main(String[] args) {
         login();
 
     }
@@ -44,7 +47,7 @@ public static void login() {
             else{
                  login = true;
                  saludar(usuario);
-                 cuenta();
+                 menu();
                 }
 
         
@@ -54,10 +57,42 @@ public static void login() {
 public static void saludar (int usuario){
      System.out.printf("Bienvido a tu Cuenta %d%n", usuario);
 }
-/* 
-public static void cuenta(){
-System.out.println("Bienvenido a tu Cuenta luna");
-System.out.println("Digite del ");
+
+public static void menu(){
+saludar(usuario);
+int opcion;
+do{
+System.out.println("-------M---E---N---U------");
+System.out.println("\n 1. Consultar Saldo");
+System.out.println(" 2. Transferir dinero");
+System.out.println(" 3. Retirar Dinero");
+System.out.println(" 4. Salir"); 
+
+    opcion = entrada.nextInt();
+    switch (opcion){
+     case 1 ->{ 
+        System.out.println("ll")  ;                  
+            //consultarSaldo(); 
+
+
+     }
+     case  2->{
+     }
+     case  3->{
+       //retirarDinero();
+     }
+     case  4-> {
+            System.out.println("Saliendo de la cuenta.... Hasta Pronto!!");
+     }
+     default ->{
+        System.out.println("Valor Erroneo, intente de Nuevo");
+     }
+
+    }
+
+
+    }while(opcion != 4);
+
 }
-*/
+
 }
