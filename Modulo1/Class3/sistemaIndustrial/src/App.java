@@ -29,6 +29,7 @@ public static void login() {
                         case 1,2,3 ->{
                             System.out.println("Has ingresado Exitosamente");
                             login = true;
+                            menu();
                         }
                         default ->{
                             System.out.println(" El turno es Invalido intente nuevamente");
@@ -37,4 +38,45 @@ public static void login() {
         }while (login != true);
         entradas.close();
 }
+
+public static void menu() {
+    int opcion = entradas.nextInt();
+
+    do{
+
+    System.out.println("""
+
+        1. Producir piezas
+        2. Ver stock de materia prima
+        3. Reportar daño de máquina
+        4. Cerrar turno
+        
+        """);   
+
+        switch (opcion){
+                //producur pieza
+            case 1 ->{
+                //Producir piezas
+            }
+            //Ver stock de materia prima
+            case 2->{
+                //Ver stock de materia prima
+            }
+            //  Reportar daño de máquina
+            case 3->{
+                // Reportar daño de máquina
+            }
+            //Cerrar turno
+            case 4->{
+                //Cerrar turno
+            }
+            default ->{
+                System.out.println(" Opcion Invalida");
+            }
+        }
+        }while (opcion != 4); 
+}
+
+
+
 }   
