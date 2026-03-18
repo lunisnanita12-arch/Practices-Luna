@@ -28,19 +28,20 @@ public static void login() {
                     switch (turnopermitido){
                         case 1,2,3 ->{
                             System.out.println("Has ingresado Exitosamente");
-                            login = true;
-                            menu();
+                             login = true;
+                           
                         }
                         default ->{
                             System.out.println(" El turno es Invalido intente nuevamente");
                         } 
                     }}
         }while (login != true);
+         menu();
         entradas.close();
 }
 
 public static void menu() {
-    int opcion = entradas.nextInt();
+    int opcion;
 
     do{
 
@@ -52,13 +53,13 @@ public static void menu() {
         4. Cerrar turno
         
         """);   
-
+        opcion = entradas.nextInt();
         switch (opcion){
-                //producur pieza
+                //producir pieza
             case 1 ->{
-                //Producir piezas
+                producirPieza();
             }
-            //Ver stock de materia prima
+              //Ver stock de materia prima
             case 2->{
                 //Ver stock de materia prima
             }
@@ -75,6 +76,31 @@ public static void menu() {
             }
         }
         }while (opcion != 4); 
+}
+public static void producirPieza() {
+    System.out.println("\n-----P-r-o-d-u-c-i-o-n---d-e---p-i-e-z-a----");
+    System.out.println("\n\n Digite el numero de piezas a fabricar:");
+    int numeroPieza = entradas.nextInt();
+    entradas.nextLine();
+
+    if (numeroPieza < 0){
+        System.out.println("Las piezas deben ser mayores que 0");}
+    else if(numeroPieza > producionMaximaxTurnos){
+            System.out.println(" No debe superar 20 piezas");}
+    else if(numeroPieza < materiaPrimaxPieza){
+        System.out.println("Materia prima insuficiente");}
+
+        else {
+            double materiaNecesaria = numeroPieza * 25;      }
+            System.out.println("""
+                    Producción realizada con éxito
+                    Stock restante: ___ kg
+                    """);
+    
+
+        
+    
+
 }
 
 
