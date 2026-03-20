@@ -1,5 +1,3 @@
-package Class3;
-
 import java.util.Scanner;
 
 public class ejercicioBanco {
@@ -14,8 +12,6 @@ public static void main(String[] args) {
     }
 public static void login() {
     
-        int usuario = 1415;    
-        int contraseña = 1234;
         boolean login = false;
         int intentos = 0;
         while (login == false && intentos < 3) {
@@ -67,7 +63,7 @@ public static void transferirDinero() {
     System.out.println("Digite el numero de Cuenta de Destino: ");
     int numeroDestino = entrada.nextInt();
     System.out.println("Digite el monto a transferir: ");
-    double montoDeTransferencia = entrada.nextInt();
+    double montoDeTransferencia = entrada.nextDouble();
     entrada.nextLine();
 
     if (montoDeTransferencia <= 0){
@@ -80,7 +76,7 @@ public static void transferirDinero() {
         double saldoActual = saldoInicial - montoDeTransferencia;
         saldoInicial = saldoActual; 
         System.out.println("Transferencia realizada con exito");
-        System.out.printf("%n Saldo Restante: $ %.0f ", saldoInicial);    
+        System.out.printf("%n Saldo Restante: $%.0f ", saldoInicial);    
     
     }   
 }
@@ -101,7 +97,7 @@ public static void retirarDinero() {
         double saldoActual = saldoInicial - montoDeTransferencia;
         saldoInicial = saldoActual; 
         System.out.println("Retiro realizada con exito");
-        System.out.printf("%n Saldo Restante: $ %.0f ", saldoInicial);    
+        System.out.printf("%n Saldo Restante: $%.0f ", saldoInicial);    
     
     }   
 }
@@ -133,7 +129,7 @@ System.out.println(" 4. Salir.\n");
      }
      case  4-> { 
             System.out.println("Gracias por usar Banco DevSenior");
-            System.out.printf("Saldo final: $.0f");
+            System.out.printf("Saldo final: $ %.0f %n", saldoInicial);
             System.out.println("Saliendo de la cuenta.... Hasta Pronto!!");
            
      }

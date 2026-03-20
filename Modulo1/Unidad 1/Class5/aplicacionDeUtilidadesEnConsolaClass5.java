@@ -1,8 +1,8 @@
-package Class3;
+
 
 import java.util.Scanner;
 
-public class menu {
+public class aplicacionDeUtilidadesEnConsolaClass5 {
     public static void main(String[] args) {
 
 

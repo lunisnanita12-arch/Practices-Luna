@@ -1,3 +1,5 @@
+package sistemaIndustrial.src;
+
 import java.util.Scanner;
 
 public class App {
@@ -106,7 +108,7 @@ public static void login() {
       System.out.printf("""
             Total de piezas producidas: %d
             Materia prima restante: %d
-            Estado final de la máquina: 
+            Estado final de la máquina: // Queda pendiente poner este estado
             """, piezasrealizadas,stockMateriaPrima);
       
    }
