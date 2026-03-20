@@ -62,7 +62,7 @@ public static void login() {
             } 
             // reportar daño
             case 3->{
-                  //pendiente esta funcion 
+                  reportarDaño();
             }
             //cierre de turno
             case 4->{
@@ -77,7 +77,7 @@ public static void login() {
 
    }
 
-   public static int producirPieza() {
+   public static void producirPieza() {
       System.out.println("\n-----P-r-o-d-u-c-i-o-n---d-e---p-i-e-z-a----");
       System.out.println("\n\n Digite el numero de piezas a fabricar:");
       int numeroPieza = entradas.nextInt();
@@ -94,7 +94,6 @@ public static void login() {
          stockMateriaPrima -= materiaNecesaria; 
          System.out.printf("Producción realizada con éxito\nStock restante: %d kg\n", stockMateriaPrima);
       }
-      return stockMateriaPrima;
 
    }
 
@@ -111,4 +110,23 @@ public static void login() {
             """, piezasrealizadas,stockMateriaPrima);
       
    }
-}   
+
+   public static void reportarDaño(){
+      System.out.println(" ¿Quieres reportar un daño? \n si la respuesta es si escribe (true) sino (false)");
+      boolean decision = entradas.nextBoolean();
+      if (decision == true){
+         System.out.println("Maquina en mantenimiento");
+      }
+      else if (decision == false){
+         System.out.println("No se reporto Daño, has salido de nuevo al menu");
+      }   
+      else {
+         System.out.println("Valor invalido");   
+      }entradas.nextLong();
+
+      }
+      
+   }
+   
+
+
