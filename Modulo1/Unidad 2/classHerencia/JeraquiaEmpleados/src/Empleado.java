@@ -38,7 +38,7 @@ public void setSalarioBase(double salarioBase) {
 }
 
 
-public static double calcularSalario(int salario){
+public double calcularSalario(int salario){
     System.out.println("calcular ");
     return salario;
 }
