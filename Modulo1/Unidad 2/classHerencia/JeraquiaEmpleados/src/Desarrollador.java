@@ -1,7 +1,7 @@
-public class Desarrollador extends Empleado {
+public class Desarrollador extends Empleado implements Trabajable{
     private String lenguajePrincipal;
 
-    public Desarrollador(String nombre, String id, double salarioBase, String lenguajePrincipal) {
+    public Desarrollador(String nombre, int id, double salarioBase, String lenguajePrincipal) {
         super(nombre, id, salarioBase);
         this.lenguajePrincipal = lenguajePrincipal;
     }
@@ -20,6 +20,10 @@ public class Desarrollador extends Empleado {
         super.mostrarDetalles();
         getLenguajePrincipal();
     }
+
+    @Override
+    public void trabajar() {
+       System.out.println("El trabajo de Desarrollador empieza");
     
 
 }

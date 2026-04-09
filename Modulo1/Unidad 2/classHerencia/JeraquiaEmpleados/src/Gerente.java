@@ -1,8 +1,13 @@
-public class Gerente extends Empleado{
+public class Gerente extends Empleado implements Trabajable{
 
 private double bonoAnual;
 
-public Gerente(String nombre, String id, double salarioBase, double bonoAnual) {
+
+public Gerente(String nombre, int id, double salarioBase) {
+    super(nombre, id, salarioBase);
+}
+
+public Gerente(String nombre, int id, double salarioBase, double bonoAnual) {
     super(nombre, id, salarioBase);
     this.bonoAnual = bonoAnual;
 }
@@ -22,5 +27,10 @@ public void mostrarDetalles() {
     getBonoAnual();
 }
 
+@Override
+public void trabajar() {
+System.out.println("Trabajo de gerente empieza");
 
+
+}
 }

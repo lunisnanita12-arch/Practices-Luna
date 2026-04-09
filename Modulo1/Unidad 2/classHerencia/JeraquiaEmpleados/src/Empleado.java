@@ -1,14 +1,14 @@
 public class Empleado {
-private String nombre, id;
-private double salarioBase;
+private String nombre ;
+private double salarioBase, id;
 
-public Empleado(String nombre, String id, double salarioBase) {
+public Empleado(String nombre, int id, double salarioBase) {
     this.nombre = nombre;
     this.id = id;
     this.salarioBase = salarioBase;
 }
 
-public Empleado(String nombre, String id) {
+public Empleado(String nombre, int id) {
     this.nombre = nombre;
     this.id = id;
 }
@@ -17,7 +17,7 @@ public String getNombre() {
     return nombre;
 }
 
-public String getId() {
+public double getId() {
     return id;
 }
 
@@ -29,7 +29,7 @@ public void setNombre(String nombre) {
     this.nombre = nombre;
 }
 
-public void setId(String id) {
+public void setId(double id) {
     this.id = id;
 }
 
