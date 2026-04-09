@@ -1,8 +1,8 @@
-package Class3;
+
 
 import java.util.Scanner;
 
-public class menu {
+public class aplicacionDeUtilidadesEnConsolaClass5 {
     public static void main(String[] args) {
 
 
@@ -31,7 +31,7 @@ public class menu {
                             System.out.println("Para calcular el area del circulo ingrese el valor de su radio");
                             double radio = entradaDato.nextDouble();
                             double area = PI *(radio*radio);
-                            System.out.printf("El area del circulo con radio %.1f es: %.1f /n ", radio, area);
+                        System.out.printf("El area del circulo con radio %.1f es: %.1f %n ", radio, area);
                         }else {
                             System.out.println("\n----C-A-L-C-U-L-O----A-R-E-A----D-E-L----R-E-C-T-A-N-G-U-L-O----");
                             System.out.println("Para calcular el area del rectangulo ingrese el valor de la base");
